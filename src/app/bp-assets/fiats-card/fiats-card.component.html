@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-body" p-2>
+    <div style="margin-bottom: 3%;">
+      <form class="form-inline my-2 my-lg-0">
+        <input [(ngModel)]="searchTerm" name="metals" class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search" >
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="table-responsive">
+      <h4>Fiats</h4>
+      <table class="table">
+      <thead>
+        <tr >
+          <th scope="col">Logo</th>
+          <th scope="col">Symbol</th>
+          <th scope="col">Name</th>
+          <th scope="col">Default Sell</th>
+          <th scope="col">Min Withdraw Euro</th>
+          <th scope="col">Wallets</th>
+          <th scope="col">Min Withdraw Wallet</th>
+          <th scope="col">Rate to Euro</th>
+          <th scope="col">Symbol Character</th>
+        </tr>
+      </thead>
+
+      <tr *ngFor= "let fiat of attributesOfFiats |filter: searchTerm : 'name'" >
+        <td><img src={{fiat.logo}} width="60" height="60" class="d-inline-block align-middle" alt="BitPanda Fiat" loading="lazy"></td>
+        <td>{{fiat.symbol}}</td>
+        <td>{{fiat.name}}</td>
+        <td>€{{fiat.default_sell_amount}}</td>
+        <td>€{{fiat.min_withdraw_euro}}</td>
+        <td>{{fiat.has_wallets}}</td>
+        <td>{{fiat.wallet_min_withdrawal}}</td>
+        <td>€{{fiat.to_eur_rate}}</td>
+        <td>{{fiat.symbol_character}}</td>
+      </tr>
+    </table>
+  </div>
+  </div> <!--class card-body-->
+</div> <!--class card-->
+<!--{{localfiat | json}}-->
+<!-- <tr *ngFor= "let fiat of attributesOfFiats|sort:['name', 'desc']" >-->
+

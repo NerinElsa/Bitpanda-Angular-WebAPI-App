@@ -1,0 +1,36 @@
+{
+  "data": {
+    "type": "collection",
+    "attributes": {
+	"fiats": [
+        {
+          "type": "fiat",
+          "attributes": {
+            "default_sell_amount": "100",
+            "has_wallets": true,
+            "logo": "https://bitpanda-assets.s3.eu-west-1.amazonaws.com/static/fiat/eur.svg",
+            "logo_color": "https://bitpanda-assets.s3.eu-west-1.amazonaws.com/static/fiat/eur_color.svg",
+            "logo_dark": "https://bitpanda-assets.s3.eu-west-1.amazonaws.com/static/fiat/eur_dark.svg",
+            "logo_white": "https://bitpanda-assets.s3.eu-west-1.amazonaws.com/static/fiat/eur_white.svg",
+            "name": "Euro",
+            "numeric_character_reference": "&#x020AC;",
+            "min_withdraw_euro": "25.0000000000000000",
+            "precision": 2,
+            "symbol": "EUR",
+            "symbol_character": "€",
+            "to_eur_rate": "1.00000000",
+            "wallet_min_withdrawal": "25.00000000",
+            "name_deu": "Euro",
+            "name_eng": "Euro",
+            "name_fra": "Euro",
+            "name_ita": "Euro",
+            "name_spa": "Euro",
+            "name_tur": "Euro"
+          },
+          "id": "1"
+        }
+       ]
+      }
+     }
+    }
+     
