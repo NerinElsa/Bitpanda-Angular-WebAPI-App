@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve --open` for a dev server. This opens the compiles project in a browser. The url is `http://localhost:4200/`. The app will reload automatically upon saving changes.
+Run `ng serve --open` for a dev server. This opens the compiled project in a browser. The url is `http://localhost:4200/`. The app will reload automatically upon saving changes.
 
 ## Code scaffolding
 
