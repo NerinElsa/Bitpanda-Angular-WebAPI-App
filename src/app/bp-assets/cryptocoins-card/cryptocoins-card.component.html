@@ -10,8 +10,10 @@
          &nbsp;
         <label>Sort by &nbsp;</label>
         <select [(ngModel)]="sortField" name="cryptocoins" class="form-control mr-sm-2" >
-          <option value="name" class="" >Name</option>
-          <option value="avg_price" class="" >Price</option>
+          <option value="name">Name</option>
+          <option value="avg_price">Price</option>
+          <option value="symbol">Symbol</option>
+
         </select>
 
         <button [(ngModel)]="sortDirection" name="cryptocoins" class="btn btn-outline-dark my-2 my-sm-0" type="button" (click)="onSortDirection()">Sort</button>
