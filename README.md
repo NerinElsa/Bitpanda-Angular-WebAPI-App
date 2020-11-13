@@ -11,7 +11,7 @@ Bootstrap is used to style the HTML table and other elements on UI. The menubar 
 
 ## Development server
 
-To run this project locally in dvelopment server follow these steps:
+To run this project locally in development server follow these steps:
 
 * Download the project into desired location and folder (use cli command or simply download the zip folder) in local machine.
 * Open cmd or any terminal window, and then navigate to the project folder.
@@ -20,7 +20,7 @@ To run this project locally in dvelopment server follow these steps:
         `npm install` followed by
         `ng update`   followed by 
         `npm update`
-* Once all errors are cleared and everything updated. run
+* Once all errors are cleared and everything is updated. run
         `ng serve --open` this compiles the project and opens it in a new browser window.
 * The url is `http://localhost:4200/`. 
 
