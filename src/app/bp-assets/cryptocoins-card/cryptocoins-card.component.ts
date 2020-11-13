@@ -10,20 +10,12 @@ import { BitPandaApiService } from 'src/app/services/bitpanda-api.service';
 export class CryptocoinsCardComponent implements OnInit {
 
   attributesOfCryptocoins : CryptocoinAttributes;
-  localcryptocoin: any = {};  //variable to store commodity info in local storage
+  localcryptocoin: any = {};                                  //variable to store commodity info in local storage
 
+  searchTerm = '';                                            //initialized searchTerm with empty string
 
-  // retrieve() {
-  //   let localcryptocoins = [];
-  //      if(localStorage.getItem('Cryptocoins')){
-
-  //       localcryptocoins = JSON.parse(localStorage.getItem('Cryptocoins'));
-  //       localcryptocoins =[this.localcryptocoin, ...localcryptocoins];
-  //      }
-
-  //    localStorage.setItem('Cryptocoins', JSON.stringify(this.localcryptocoin));
-  //  };
-
+  sortField = '';                                             //initialized sort field
+  sortDirection = '';                                         //initialized sort direction
 
   constructor(private apiService: BitPandaApiService) { }
 
@@ -36,9 +28,15 @@ export class CryptocoinsCardComponent implements OnInit {
         //STORE IN LOCAL STORAGE
         this.localcryptocoin = Object.assign(this.localcryptocoin, this.attributesOfCryptocoins);
         localStorage.setItem('Cryptocoins', JSON.stringify(this.localcryptocoin));
-        //this.retrieve();   //Call retrieve function
-      }
-    )
+        });
+  }
+
+  onSortDirection(){
+    if(this.sortDirection === 'desc'){
+      this.sortDirection = 'asce';
+    }else{
+      this.sortDirection = 'desc';
+    }
   }
 
 }

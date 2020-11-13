@@ -1,44 +1,52 @@
 
 <div class="card">
   <div class="card-body" p-2>
+    <div style="margin-bottom: 3%;">
 
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search" >
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      <form class="form-inline my-2 my-lg-0">
+        <input [(ngModel)]="searchTerm" name="metals" class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search" >
+      </form>
 
-    <div class="table-responsive">
+    </div>
+
+    <div class="table-responsive" >
       <h4>Metals</h4>
-       <table class="table">
+       <table class="table" >
 
-      <thead>
-        <tr>
-          <th scope="col">Logo</th>
-          <th scope="col">Symbol</th>
-          <th scope="col">Name</th>
-          <th scope="col">Price</th>
-          <th scope="col">Min Buy</th>
-          <th scope="col">Min Sell</th>
-          <th scope="col">Default Sell Amount</th>
-        </tr>
+       <thead>
+          <tr width=100%>
+            <th scope="col">Logo</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Min Buy</th>
+            <th scope="col">Min Sell</th>
+            <th scope="col">Default Sell</th>
+            <th scope="col">Unit</th>
+            <th scope="col">24h change</th>
+            <th scope="col">1 week change</th>
+            <th scope="col">1 month change</th>
+            <th scope="col">1 year change</th>
+          </tr>
       </thead>
 
-      <!--<tr *ngFor= "let comm of attributesOfCommodity |filter: searchTerm : 'name'" >-->
-      <tr *ngFor= "let comm of attributesOfCommodity" >
+      <tr *ngFor= "let comm of attributesOfCommodity |filter: searchTerm : 'name'" >
+
         <td><img src={{comm.logo}} width="60" height="60" class="d-inline-block align-middle" alt="bitpanda" loading="lazy"></td>
         <td>{{comm.symbol}}</td>
         <td>{{comm.name}}</td>
         <td>€{{comm.avg_price}}</td>
-        <!-- <td>{{comm.buy_active}}</td> -->
         <td>€{{comm.min_buy_eur}}</td>
-        <!-- <td>{{comm.sell_active}}</td> -->
         <td>€{{comm.min_sell_eur}}</td>
-        <!--<td>{{comm.available}}</td>-->
         <td>€{{comm.default_sell_amount}}</td>
-      </tr>
+        <td>{{comm.measurement_unit}}</td>
+        <td>€{{comm.change_24h_amount}}</td>
+        <td>€{{comm.change_1w_amount}}</td>
+        <td>€{{comm.change_1m_amount}}</td>
+        <td>€{{comm.change_1y_amount}}</td>
+        </tr>
     </table>
   </div>
-  </div> <!--class card-body-->
+ </div> <!--class card-body-->
 </div> <!--class card-->
 
-<!--| filter:'Gold': 'Name'-->

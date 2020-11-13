@@ -10,18 +10,9 @@ import { BitPandaApiService } from 'src/app/services/bitpanda-api.service';
 export class FiatsCardComponent implements OnInit {
 
   attributesOfFiats : FiatAttributes;
-  localfiat: any = {};  //variable to store fiats in local storage
-
-  // retrieve() {
-  //   let localfiats = [];
-  //      if(localStorage.getItem('Fiats')){
-  //       // SORT IT OUT!!
-  //       localfiats = JSON.parse(localStorage.getItem('Fiats'));
-  //       //localfiats =[this.localfiat, ...localfiats];
-  //      }
-
-  //    localStorage.setItem('Fiats', JSON.stringify(this.localfiat));
-  //  };
+  localfiat: any = {};                                  //variable to store fiats in local storage
+  searchTerm = '';                                      //search term initialized with empty string
+  sort = ['', ''];                                      //sort array initialized with empty params
 
   constructor(private apiService: BitPandaApiService) { }
 
@@ -35,7 +26,6 @@ export class FiatsCardComponent implements OnInit {
 
         //STORE IN LOCAL STORAGE
         this.localfiat = Object.assign(this.localfiat, this.attributesOfFiats);
-        //this.retrieve();   //Call retrieve function
         localStorage.setItem('Fiats', JSON.stringify(this.localfiat));
 
       });

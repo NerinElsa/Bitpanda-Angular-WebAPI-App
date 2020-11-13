@@ -1,16 +1,10 @@
 # JuniorAngularTestapp
 
-This project implements an Angular front-end that retrieves data from BitPanda API endpoint. Visualizes specific data such as 'Commodities', Cryptocoins', Indexes and Fiats from the received data in html tables. 
-
-## Features of this project
-
-In this project, I have implemented a simple 'search' field and a 'sort' field using angular pipes. In additon, I have combined string interpolation and structural directives to display data inside html tables. Moreover, I have made use of RouterModule to achieve menubar navigation. Also, I have stored the received data in local storage so that to use it future for INDEXED DB implementation. For over all and table styling I have used Bootstrap latest version 4.5.
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
 
-Run `ng serve --open` for a dev server. This opens the compiled project in a browser. The url is `http://localhost:4200/`. The app will reload automatically upon saving changes.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

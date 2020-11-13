@@ -18,8 +18,7 @@ import { CryptocoinsCardComponent } from './bp-assets/cryptocoins-card/cryptocoi
 import { Routes, RouterModule } from '@angular/router'
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
-//import { FormsModule } from '@angular/forms';
-//import { ReactiveFormsModule } from '@angular/forms' ;
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: BpAssetsListComponent},
@@ -39,15 +38,14 @@ const appRoutes: Routes = [
     FiatsCardComponent,
     CryptocoinsCardComponent,
     FilterPipe,
-    SortPipe,
-    //FormsModule
-    //ReactiveFormsModule
+    SortPipe
    ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [BitPandaApiService, MetalsCardComponent],
   bootstrap: [AppComponent]

@@ -11,17 +11,7 @@ export class IndexesCardComponent implements OnInit {
 
   attributesOfIndexes: Array <IndexAttributes>;  //Attributes of Indexes
   localindex: any = {};                          //variable to store indexes into local storage
-
-  // retrieve() {
-  //   let localindexes = [];
-  //      if(localStorage.getItem('Indexes')){
-
-  //        localindexes = JSON.parse(localStorage.getItem('Indexes'));
-  //        localindexes =[this.localindex, ...localindexes];
-  //      }
-
-  //    localStorage.setItem('Indexes', JSON.stringify(this.localindex));
-  //  };
+  searchTerm ='';                                //initiaized searchTerm with empty string
 
   constructor(private appService: BitPandaApiService ) { }
 
@@ -35,9 +25,8 @@ export class IndexesCardComponent implements OnInit {
         //STORE IN LOCAL STORAGE
         this.localindex = Object.assign(this.localindex, this.attributesOfIndexes);
         localStorage.setItem('Indexes', JSON.stringify(this.localindex));
-        //this.retrieve();   //Call retrieve function
-      }
-    )
+
+      });
   }
 
 }

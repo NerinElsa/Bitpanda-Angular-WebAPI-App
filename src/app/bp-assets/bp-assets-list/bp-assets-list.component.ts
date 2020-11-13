@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { CommodityAttributes } from 'src/app/classes/commodities';
 import { CryptocoinAttributes } from 'src/app/classes/cryptocoins';
 import { FiatAttributes } from 'src/app/classes/fiats';

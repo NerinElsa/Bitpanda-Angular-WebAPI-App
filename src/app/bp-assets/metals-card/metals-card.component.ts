@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { CommodityAttributes } from 'src/app/classes/commodities';
 import { BitPandaApiService } from 'src/app/services/bitpanda-api.service';
-//import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -15,20 +14,9 @@ export class MetalsCardComponent implements OnInit {
 
   //declaration of attributes from commodities array
   attributesOfCommodity: Array <CommodityAttributes>;       //Attributes of Commodities
-  localcommodity: any = {};  //variable to store commodity info in local storage
-  searchTerm: '';
-
-  // retrieve() {
-  //    let localcommodities = [];
-  //       if(localStorage.getItem('Commodities')){
-
-  //         localcommodities = JSON.parse(localStorage.getItem('Commodities'));
-  //         localcommodities =[this.localcommodity, ...localcommodities];
-  //       }
-
-  //     localStorage.setItem('Commodities', JSON.stringify(this.localcommodity));
-  //   };
-
+  localcommodity: any = {};                                 //variable to store commodity info in local storage
+  searchTerm = '';
+  sortDirection = 'asc';                                         //initial value for searchTerm
 
   //declaration of service
   constructor(private appService: BitPandaApiService) { }
@@ -46,7 +34,6 @@ export class MetalsCardComponent implements OnInit {
         //STORE IN LOCAL STORAGE
         this.localcommodity = Object.assign(this.localcommodity, this.attributesOfCommodity);
         localStorage.setItem('Commodities', JSON.stringify(this.localcommodity));
-        //this.retrieve();   //Call retrieve function
 
       });
 
@@ -55,6 +42,5 @@ export class MetalsCardComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  }
+}
 
-//}
